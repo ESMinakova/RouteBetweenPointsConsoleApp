@@ -43,9 +43,8 @@ namespace RouteBetweenPointsConsoleApp
         public void Print(List<string> points)
         {
             var exceptEndPoints = points.Take(points.Count - 1).ToList();
-            Console.Write("(");
-            exceptEndPoints.ForEach(x => Console.Write($"{x}, "));
-            Console.Write($"{points.Last()})");
+            exceptEndPoints.ForEach(x => Console.Write($"{x} "));
+            Console.Write($"{points.Last()}");
         }
 
         public string GetStartPoint()
